@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Neagen Oy reservation system</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Neagen Oy reservation system</span>
+            <span class="navbar-text" th:text="'Hello, ' + ${name} + '!'">
+            </span>
+        </div>
+    </nav>
+
+    <div id="appointments" class="col-lg-8 mx-auto py-md-5" v-cloak>
+        <h3>List of current appointments</h3>
+
+        <ul>
+            <li v-for="appointment in appointments">
+                <div>{{ appointment.description }}</div>
+                <div>{{ appointment.startTime }}</div>
+                <div>{{ appointment.endTime }}</div>
+            </li>
+        </ul>
+
+        <form @submit="addAppointment">
+            <h3 class="mb-3">Add an appointment</h3>
+            <div class="form-group mt-2">
+                <label for="description">Description</label>
+                <input type="text" class="form-control" id="description" placeholder="Description for the appointment" v-model="appointmentDescription">
+            </div>
+            <div class="form-group mt-2">
+                <label for="start">Start date</label>
+                <input type="text" class="form-control" id="start" v-model="appointmentStartTime">
+            </div>
+            <div class="form-group mt-2">
+                <label for="end">End date</label>
+                <input type="text" class="form-control" id="end" v-model="appointmentEndTime">
+            </div>
+
+            <button class="btn btn-primary mt-4" type="submit">Add new appointment</button>
+        </form>
+    </div>
+
+    <script src="js/vue.global.js"></script>
+    <script src="js/appointments-application.js"></script>
+</body>
+
+</html>
