@@ -22,6 +22,7 @@ You can make any changes required to the existing code and you can use external 
 * [Improvement] Styling the UI
 * [Improvement] Show the appointments in a calendar view (Google Calendar -style)
 * [New feature] Support for multiple users. Each user shall see only their own appointments (Hint: use the "name" parameter)
+* [New feature] Database persistence. Use an in-memory database (Sqlite, H2) to store and retrieve the appointments. 
 
 ### Reference Documentation
 
