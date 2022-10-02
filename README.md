@@ -9,7 +9,7 @@
 
 ### Start
 
-To Start, simply run **_docker-compose up_** and visit port http://hostIp:8080
+To Start, simply run **_docker-compose up_** and visit port http://hostIp:8080 for the UI and http://hostIp:8088 for skywalking monitoring Tool
 
 ![](../screencapture-localhost-8080-ui-2022-10-02-09_23_02.png)
 

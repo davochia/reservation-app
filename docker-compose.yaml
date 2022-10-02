@@ -3,7 +3,7 @@ version: "3"
 services:
   # Backend Service
   appointmentApp:
-    image: wisekingdavid/appoitment-app:0.1
+    image: wisekingdavid/appointment-app:0.1
     container_name: appointment-server
     ports:
       - "8080:8080"
