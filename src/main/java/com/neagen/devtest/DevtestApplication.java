@@ -1,18 +1,13 @@
 package com.neagen.devtest;
 
-import com.neagen.devtest.rest.Appointment;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
-
-import javax.servlet.http.HttpServletRequest;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 @SpringBootApplication(scanBasePackages={"com.neagen.devtest"})
 public class DevtestApplication {
+	Logger logger = LoggerFactory.getLogger(DevtestApplication.class);
 
 	public DevtestApplication(){
 	}
