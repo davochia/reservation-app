@@ -1,0 +1,33 @@
+# Database
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: password
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        trace: false
+        web-allow-others: false
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    database: h2
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+# Skywalking conf
+Dskywalking:
+  agent:
+    service_name: ${SW_AGENT_NAME:appointment-app}
+  collector:
+    backend_service: ${SW_AGENT_COLLECTOR_BACKEND_SERVICES:127.0.0.1:11800}

@@ -1,0 +1,27 @@
+[v-cloak] {
+  display: none;
+}
+
+.inactiveAppointment {
+  border-left: 5px solid red;
+}
+
+.activeAppointment {
+  border-right: 5px solid green;
+}
+
+.appointment {
+  background: #f4f4f4;
+  margin: 5px;
+  padding: 10px 20px;
+}
+
+.muted-text {
+  /* text-decoration: line-through; */
+  font-weight: lighter;
+}
+
+.muted-text::after {
+  content: " <- Elapsed";
+  color: red;
+}
