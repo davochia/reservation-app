@@ -1,4 +1,4 @@
-# Neagen reservation system
+# Reservation system
 
 ## Tools
 
